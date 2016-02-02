@@ -1,0 +1,126 @@
+﻿@model IEnumerable<EAD_Project.Models.Doctor>
+
+@{
+    ViewBag.Title = "Index";
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<div style="font-family: Arial; background-color: #f4f4f4">
+ 
+    <h2 style="color:#136DA2;font-size:30px;">List OF Doctors</h2>
+<p>
+    <a style="margin:500px; color:#136DA2; font-size:30px; " href="@Url.Action("index", "Add")">Add new Doctor</a>
+</p>
+<table style=" margin-top:20px; width:80%; margin-left:100px;">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Doctor_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fees)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Specialty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Oppening_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Closing_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Experince)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doctor_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fees)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Specialty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Oppening_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Closing_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Days)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Experince)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.image)
+        </td>
+        <td>
+            <a id="someLink" href="@Url.Action("delete", "Edit", new { id = item.Doctor_id })">Delete</a>
+            <a href="@Url.Action("index", "Edit", new {id=item.Doctor_id })">EDIT</a>
+        </td>
+    </tr>
+}
+
+
+</table>
+</div>

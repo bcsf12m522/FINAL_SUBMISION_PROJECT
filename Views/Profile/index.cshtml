@@ -1,0 +1,121 @@
+﻿@model EAD_Project.Models.Doctor
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/content/profile/style.css" />
+    <title>Doctor profile</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo pull_left">
+            <a href="#"> <img src="~/images/logo.png" width="100px" /> </a>
+            <a class="logo_img" href="#"> <img src="~/images/Find Doctor.png" /> </a>
+        </div>
+
+        <div class="nav pull_left">
+            <ul>
+                <li class="active"><a href="#">Home </a></li>
+                <li><a href="#">Services </a></li>
+                <li><a href="#">About us </a></li>
+                <li><a href="#">Contact us </a></li>
+            </ul>
+        </div>
+        <div class="login pull_right">
+            <label> For admin: </label>
+            <a href="#"> Login </a>
+        </div>
+        <div class="clear"> </div>
+    </div>
+    <div class="content">
+        <div class="content_container">
+            <div class="left_content pull_left">
+                <p>Doctor Information </p>
+                <p> Authenticated info</p>
+            </div>
+            <div class="middle_content pull_left">
+                <h2>@Model.Name </h2>
+                <p>@Model.Specialty</p>
+                <h4>Address:</h4>
+                <p>@Model.Address</p><p>
+                    <h4>Office Hours:</h4>
+                </p>
+                <p>@Model.Oppening_time</p>
+                <p>@Model.Closing_time</p>
+                <h4>Available Days:</h4>
+                <p>@Model.Days</p>
+                <h4> Contact Number: </h4>
+                <h4 style="color:#933; text-align:center">@Model.Phone_num </h4>
+                <h4>CheckUp Fees </h4>
+                <p>@Model.Fees</p>
+                <h4>Experience </h4>
+                <p>@Model.Experince</p>
+                
+              
+            </div>
+            <div class="right_content pull_right">
+                <img src="~/Content/Images/@Model.image" />
+                <p>Illness is the doctor to whom we pay most heed; to kindness, to knowledge, we make promise only; pain we obey </p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_container">
+            <div class="nav_foot pull_left">
+                <ul>
+
+                    <li>FIND DOCTOR </li>
+                    <li>426K Block ,Johar Town,Lahore</li>
+                    <li>Email id-Kamrankj7@yahoo.com </li>
+                    <li>Email id-Bcsf12m522@pucit.edu.pk </li>
+                </ul>
+            </div>
+
+            <div class="nav_foot pull_left">
+                <ul>
+                    <li>ABOUT US </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us </a></li>
+                    <li><a href="#">Contact us </a></li>
+                </ul>
+            </div>
+            <div class="nav_foot pull_left">
+                <ul>
+                    <li>Services </li>
+                    <li>Contact Doctor</li>
+                    <li>Provide Doctor info </li>
+                    <li>Doctor location </li>
+                </ul>
+            </div>
+            <div class="nav_foot pull_left">
+                <ul>
+                    <li>Customer Service </li>
+                    <li>24/7 available</li>
+                    <li><a href="#">contact us </a></li>
+                </ul>
+            </div>
+            <div class="clear">
+
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="right pull_left">
+                <p>Powered By KHANsCompany </p>
+            </div>
+            <div class="right2 pull_right">
+                <ul>
+                    <li>Terms and Conditions </li>
+                    <li>Copyright 2015 OnlineFindDoctor.All rights Reserved.</li>
+
+                </ul>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+
+</body>
+</html>
